@@ -17,6 +17,7 @@ import {
   MessageSquare 
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
+import { Logo } from '../components/shared/Logo';
 
 export const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -119,12 +120,9 @@ export const LandingPage: React.FC = () => {
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[150px] pointer-events-none" />
       <div className="absolute top-[20%] right-1/4 w-[400px] h-[400px] rounded-full bg-secondary/10 blur-[120px] pointer-events-none" />
 
-      {/* Landing Header */}
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between border-b border-white/5 relative z-20">
         <div className="flex items-center gap-2.5">
-          <div className="h-9 w-9 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
-            <Sparkles className="h-5 w-5 text-white" />
-          </div>
+          <Logo size="md" />
           <span className="text-xl font-extrabold tracking-tight text-white">
             FlowSync
           </span>
@@ -425,7 +423,7 @@ export const LandingPage: React.FC = () => {
       <footer className="border-t border-white/5 bg-slate-950/80 py-12 text-slate-500">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-primary" />
+            <Logo size="sm" />
             <span className="text-white font-bold text-sm">FlowSync Inc.</span>
           </div>
 

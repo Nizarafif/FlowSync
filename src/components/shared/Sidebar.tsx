@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useAppStore } from '../../store';
 import { WorkspaceSwitcher } from './WorkspaceSwitcher';
+import { Logo } from './Logo';
 import { 
   LayoutDashboard, 
   LayoutGrid, 
@@ -12,7 +13,6 @@ import {
   LogOut, 
   X, 
   ChevronRight,
-  Sparkles,
   Plus
 } from 'lucide-react';
 
@@ -85,9 +85,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
         {/* Brand Header */}
         <div className="h-16 flex items-center justify-between px-6 border-b border-slate-200/40 dark:border-slate-900/30">
           <Link to="/dashboard" className="flex items-center gap-2">
-            <div className="h-7 w-7 rounded-lg bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-              <Sparkles className="h-4 w-4 text-white" />
-            </div>
+            <Logo size="sm" />
             <span className="text-base font-extrabold tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-200 bg-clip-text text-transparent">
               FlowSync
             </span>

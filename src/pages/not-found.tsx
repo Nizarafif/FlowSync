@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
-import { Sparkles, ArrowLeft, Layers } from 'lucide-react';
+import { Logo } from '../components/shared/Logo';
+import { ArrowLeft, Layers } from 'lucide-react';
 
 export const NotFound: React.FC = () => {
   const navigate = useNavigate();
@@ -18,9 +19,7 @@ export const NotFound: React.FC = () => {
       <div className="w-full max-w-[440px] z-10 flex flex-col items-center text-center space-y-6">
         {/* Brand */}
         <div className="flex items-center gap-2.5">
-          <div className="h-9 w-9 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
-            <Sparkles className="h-5 w-5 text-white" />
-          </div>
+          <Logo size="md" />
           <span className="text-xl font-extrabold tracking-tight text-white">
             FlowSync
           </span>

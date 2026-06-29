@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, Navigate, Link } from 'react-router-dom';
 import { useAppStore } from '../store';
-import { Sparkles } from 'lucide-react';
+import { Logo } from '../components/shared/Logo';
 
 export const AuthLayout: React.FC = () => {
   const { isAuthenticated } = useAppStore();
@@ -24,9 +24,7 @@ export const AuthLayout: React.FC = () => {
       <div className="w-full max-w-[440px] z-10 flex flex-col items-center">
         {/* Logo and Brand */}
         <Link to="/" className="flex items-center gap-2.5 mb-8 hover:opacity-90 transition-opacity">
-          <div className="h-9 w-9 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
-            <Sparkles className="h-5 w-5 text-white" />
-          </div>
+          <Logo size="md" />
           <span className="text-xl font-extrabold tracking-tight text-white">
             FlowSync
           </span>
